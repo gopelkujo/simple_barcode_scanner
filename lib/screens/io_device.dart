@@ -1,12 +1,9 @@
 import 'dart:io';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:simple_barcode_scanner/enum.dart';
 import 'package:simple_barcode_scanner/screens/barcode_controller.dart';
-import 'package:simple_barcode_scanner/screens/window.dart';
-
 import '../barcode_appbar.dart';
 import '../constant.dart';
 import '../flutter_barcode_scanner.dart';
@@ -47,17 +44,7 @@ class BarcodeScanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (Platform.isWindows) {
-      ///Get Window barcode Scanner UI
-      return WindowBarcodeScanner(
-        lineColor: lineColor,
-        cancelButtonText: cancelButtonText,
-        isShowFlashIcon: isShowFlashIcon,
-        scanType: scanType,
-        onScanned: onScanned,
-        appBarTitle: appBarTitle,
-        centerTitle: centerTitle,
-        delayMillis: delayMillis,
-      );
+      throw 'Platform not supported';
     } else {
       /// Scan Android and ios barcode scanner with flutter_barcode_scanner
       /// If onClose is not null then stream barcode otherwise scan barcode

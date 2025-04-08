@@ -25,7 +25,7 @@ android {
     compileSdkVersion 34
     namespace "com.amolg.flutterbarcodescanner"
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 34
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
